@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="MEHDiNEOX portfolio">
+    <title>MEHDiNEOX // Portfolio</title>
+
+    <style>
+        @font-face {
+            font-family: 'VT323';
+            src: url('fonts/title.woff2') format('woff2');
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: 'Press Start 2P';
+            src: url('fonts/font.ttf') format('truetype');
+            font-display: swap;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --green: #00ff66;
+            --orange: #ff7b00;
+            --bg: #050805;
+        }
+
+        body {
+            background: var(--bg);
+            color: var(--green);
+            font-family: 'VT323', monospace;
+            font-size: 18px;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .terminal {
+            width: 100%;
+            max-width: 650px;
+            height: fit-content;
+            border: 1px solid var(--green);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 0 25px #00ff6622;
+        }
+
+        .topbar {
+            display: flex;
+            align-items: center;
+            gap: 7px;
+            background: #102015;
+            padding: 12px;
+            border-bottom: 1px solid #00ff6644;
+            color: #8affae;
+            font-size: 16px;
+        }
+
+        .topbar span:last-child {
+            margin-left: auto;
+        }
+
+        .status-light {
+            width: 8px;
+            height: 8px;
+            background: var(--green);
+            border-radius: 50%;
+            box-shadow: 0 0 8px var(--green);
+        }
+
+        .content {
+            padding: 28px 22px;
+            line-height: 1.6;
+        }
+
+        section {
+            margin-bottom: 32px;
+        }
+
+        h1 {
+            font-family: 'Press Start 2P', monospace;
+            font-size: clamp(18px, 5.5vw, 28px);
+            font-weight: normal;
+            text-shadow: 0 0 12px var(--green);
+            margin: 12px 0;
+        }
+
+        h2 {
+            color: var(--orange);
+            font-size: 24px;
+            font-weight: normal;
+            margin-bottom: 8px;
+        }
+
+        h3 {
+            color: #ffffff;
+            font-size: 22px;
+            font-weight: normal;
+        }
+
+        p {
+            color: #8affae;
+            font-size: 18px;
+        }
+
+        .skills {
+            list-style: none;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .skills li {
+            border: 1px solid var(--green);
+            border-radius: 4px;
+            padding: 2px 12px;
+            font-size: 18px;
+        }
+
+        .skills .learning {
+            color: #63866c;
+            border-color: #63866c;
+        }
+
+        .project {
+            border: 1px solid #00ff6644;
+            border-radius: 6px;
+            padding: 14px;
+            margin-bottom: 14px;
+            transition: 0.25s;
+        }
+
+        .project:hover {
+            border-color: var(--green);
+            box-shadow: 0 0 14px #00ff6633;
+        }
+
+        a {
+            color: var(--green);
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        a:hover {
+            color: var(--orange);
+        }
+
+        #contact a {
+            margin-right: 16px;
+        }
+
+        .footer {
+            color: #63866c;
+            font-size: 15px;
+        }
+    </style>
+</head>
+<body>
+
+    <main class="terminal">
+        <div class="topbar">
+            <span class="status-light"></span>
+            <span>SYSTEM ONLINE</span>
+            <span>PORTFOLIO</span>
+        </div>
+
+        <div class="content">
+
+            <section id="hero">
+                <p>&gt; whoami</p>
+                <h1>MEHDiNEOX</h1>
+                <p>Young Web Developer | Front-End Learner</p>
+            </section>
+
+            <section id="about">
+                <h2>&gt; about</h2>
+                <p>Learning web development step by step, building real projects.</p>
+            </section>
+
+            <section id="skills">
+                <h2>&gt; skills</h2>
+                <ul class="skills">
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li class="learning">JavaScript [LEARNING]</li>
+                </ul>
+            </section>
+
+            <section id="projects">
+                <h2>&gt; projects</h2>
+
+                <article class="project">
+                    <h3>Profile Card</h3>
+                    <p>A personal profile card built with HTML and CSS.</p>
+                    <a href="https://mehdineoxdeveloper.github.io/html_learning/" target="_blank" rel="noopener">[ OPEN ]</a>
+                </article>
+
+                <article class="project">
+                    <h3>Terminal Landing Page</h3>
+                    <p>Matrix-style coming soon page with a live clock and typing effect.</p>
+                    <a href="https://mehdineoxdeveloper.github.io/MEHDiNEOX_ComingSoon/" target="_blank" rel="noopener">[ OPEN ]</a>
+                </article>
+            </section>
+
+            <section id="contact">
+                <h2>&gt; contact</h2>
+                <a href="https://github.com/MehdiNeoxDeveloper" target="_blank" rel="noopener">GitHub</a>
+                <a href="https://t.me/mehdineox" target="_blank" rel="noopener">Telegram</a>
+                <a href="https://x.com/Mehdi_Neox" target="_blank" rel="noopener">X</a>
+            </section>
+
+            <p class="footer">© MEHDiNEOX | ALL SYSTEMS RESERVED</p>
+
+        </div>
+    </main>
+
+</body>
+</html>
